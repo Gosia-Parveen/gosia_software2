@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            position: relative;
+            height: 200vh;
+            background-color: white;
+            font-family: 'Times New Roman';
+            gap: 20px;
+             overflow-x: hidden;
+        }
+
+        .navbar {
+            background-color: #334e29;
+            height: 60px;
+            width: 100%;
+            margin: 0;
+            position: relative;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: #9fb98e;
+            font-size: 30px;
+            text-align: center;
+            text-decoration: none;
+            padding-right: 20px;
+            position: relative;
+            margin-left: 10px;
+        }
+
+        #image_column {
+            height: 40%;
+            width: 75%;
+            display: flex;
+            border: 5px solid #9fb98e;
+            position: absolute; 
+            top: 80px; 
+            left: 50%;
+            transform: translateX(-50%);
+            align-items: center;
+            justify-content: center;
+
+            /* 👇 ensures all images fit box */
+            background-size: cover;  /* fill box proportionally */
+            background-position: center; /* center image */
+            background-repeat: no-repeat;
+        }
+
+
+        .text_box{
+            font-family: Georgia;
+            top: 580px;
+            position: relative;
+            
+        
+        }
+
+        .text_box h1{
+            font-size: 50px;
+            color: #23330e;
+            text-align: center;
+            bottom: 10px;
+                        position: relative;
+
+        }
+
+        .text_box h3{
+            font-size: 28px;
+            color: #235842;
+            text-align: left;
+            bottom: 5px;
+            margin-left: 20px;
+                        position: relative;
+
+        }
+
+        .text_box p{
+            font-size: 20px;
+            color: #678e34;
+            text-align: left;
+            margin-left: 20px;
+            margin-right: 15px;
+            bottom: 5px;
+            position: relative;
+
+        }
+
+
+
+
+        /* 📱 Mobile Responsive */
+        @media (max-width: 768px) {
+        .navbar {
+            flex-direction: column;
+            height: auto;
+            padding: 10px;
+        }
+
+        .navbar a {
+        display: block;
+        font-size: 20px;
+        margin: 5px 0;
+            padding: 10px 0;
+        }
+
+        #image_column {
+            width: 95%;
+            height: 200px;
+            top: 70px;
+            position: relative;
+            transform: none;
+            left: 0;
+            margin: 0 auto;
+        }
+
+        .text_box {
+            top: 20px;
+            padding: 10px;
+        }
+
+        .text_box h1 {
+            font-size: 30px;
+        }
+
+        .text_box h3 {
+            font-size: 20px;
+        }
+
+        .text_box p {
+            font-size: 16px;
+        }
+    }
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div>
+            <a href="index.html">Home</a>
+            <a href="P&S.html">Products & Services</a>
+            <a href="digital.html">Digital Marketing</a>
+            <a href="cloud.html">Cloud Service</a>
+            <a href="client.html">Our Clients</a>
+            <a href="partners.html">Our Partners</a>
+            <a href="contact.html">Contact us</a>
+        </div>
+    </div>
+
+
+
+    <div id="image_column"></div> <!-- slideshow container -->
+
+
+
+    <div class="text_box">
+       
+            <h1>ABOUT US</h1><hr style="background-color: #334e29; height: 10px ; width: 50%;">
+
+            <h3>ANDi software solutions makes technology and information work for business :</h3>
+            <p>Use our products to grow, protect, and simplify your business processes. Our tools enables our users to attract,
+                 keep & further increase their end customers.</p>
+            <hr style="background-color: #334e29; height: 5px ; width: 50%; bottom: 5px;">
+
+
+            <h3>We help you to grow :</h3>
+            <p> Carefully study markets, trends, emerging practices for industry & region and adds learnings to makes our products
+                 to help you to grow globally.</p>
+            <hr style="background-color: #334e29; height: 5px ; width: 50%; bottom: 5px;">
+
+
+            <h3>We are united by a strong set of values & focused on client impact.</h3>
+            <p>The quality of our team is the pivot stone in our ability to serve our clients. For this reason, we invest tremendous
+                 resources in identifying exceptional people, develop their skill and create an environment to deliver best in class
+                 products to customers.
+            </p><hr style="background-color: #334e29; height: 5px ; width: 50%; bottom: 5px;">
+
+            
+            <h3>We help make change happen.</h3>
+            <p>Our experience, tools and hands-on support help clients to achieve their goal by using our products & services.</p>
+            <hr style="background-color: #334e29; height: 5px ; width: 50%; bottom: 5px;">
+            
+
+            <h3>Honesty</h3>
+            <p>This guiding principle helped us in building long-term relationships with our customers and partners across the globe.</p>
+            <hr style="background-color: #334e29; height: 5px ; width: 50%; bottom: 5px;">
+
+
+            <h3>Commitment</h3>
+            <p>We understand that the success of the business fundamentally depends on the people in it. We put people first and do not 
+                rest until our clients are satisfied and delighted.</p>
+            <hr style="background-color: #334e29; height: 5px ; width: 50%; bottom: 5px;">
+            
+
+            <h3>Originality</h3>
+            <p>Our team believes in original content and designs. We thus do development and content writing ourselves rather than 
+                copying the content from existing websites.
+            </p>
+        
+    </div>
+
+
+
+
+
+
+
+    <script>
+        // photo slide show 
+        function startSlideshow() {
+            var img = [
+                "photo/2.jpg",
+                "photo/3.png",  
+                "photo/4.jpg",  
+                "photo/5.jpg",  
+                "photo/digital-marketing.jpg"
+            ];
+    
+            var index = 0;
+            var box = document.getElementById("image_column"); // ✅ fixed id
+
+            function changeImage() {
+                box.style.backgroundImage = "url('" + img[index] + "')";
+                index = (index + 1) % img.length;
+            }
+
+            changeImage();
+            setInterval(changeImage, 1000); // change every 2s
+        }
+
+        window.onload = startSlideshow;
+    </script>
+</body>
+</html>

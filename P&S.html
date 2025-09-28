@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            position: relative;
+            height: 220vh;
+            background-color: white;
+            font-family: 'Times New Roman';
+            gap: 20px;
+             overflow-x: hidden;
+        }
+
+        .navbar {
+            background-color: #334e29;
+            height: 60px;
+            width: 100%;
+            margin: 0;
+            position: relative;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: #9fb98e;
+            font-size: 30px;
+            text-align: center;
+            text-decoration: none;
+            padding-right: 20px;
+            position: relative;
+            margin-left: 10px;
+        }
+
+        #image_column {
+            height: 40%;
+            width: 75%;
+            display: flex;
+            border: 5px solid #9fb98e;
+            position: absolute; 
+            top: 80px; 
+            left: 50%;
+            transform: translateX(-50%);
+            align-items: center;
+            justify-content: center;
+
+            /* 👇 ensures all images fit box */
+            background-size: cover;  /* fill box proportionally */
+            background-position: center; /* center image */
+            background-repeat: no-repeat;
+        }
+
+
+        .table_box {
+            font-family: Georgia;
+            top: 600px;
+            background-color:#dcf5c5;
+            position: relative;
+            width: 90%;              /* make table fit nicely */
+            margin: 0 auto;          /* center the table */
+            border-collapse: collapse;
+            text-align: center;      /* center text in cells */
+        }
+
+        .table_box th, .table_box td {
+            border: 2px solid #334e29;  /* table border */
+            padding: 15px;
+            vertical-align: middle;     /* center vertically */
+        }
+
+        .table_box th {
+            font-size: 30px;
+            color: #23330e;
+        }
+    
+        .table_box td {
+            font-size: 20px;
+            color: #235842;
+        }
+        
+
+        /* 📱 Mobile Responsive */
+        @media (max-width: 768px) {
+            .navbar {
+            flex-direction: column;
+            height: auto;
+            padding: 10px;
+            }
+        
+            .navbar a {
+            display: block;
+            font-size: 20px;
+            margin: 8px 0;
+                padding: 8px 0;
+            }
+        
+            #image_column {
+                width: 95%;
+                height: 200px;
+                top: 70px;
+                position: relative;
+                transform: none;
+                left: 0;
+                margin: 0 auto;
+            }
+
+            .table_box {
+                top: 20px;
+                width: 100%;
+                font-size: 16px;
+                overflow-x: auto;
+                display: block;
+            }
+        
+            .table_box th {
+                font-size: 20px;
+                padding: 8px;
+            }
+
+            .table_box td {
+                font-size: 14px;
+                padding: 6px;
+                text-align: left;   /* better readability on mobile */
+            }
+            .hr{
+                height: 5px;
+            }
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div>
+            <a href="index.html">Home</a>
+            <a href="P&S.html">Products & Services</a>
+            <a href="digital.html">Digital Marketing</a>
+            <a href="cloud.html">Cloud Service</a>
+            <a href="client.html">Our Clients</a>
+            <a href="partners.html">Our Partners</a>
+            <a href="contact.html">Contact us</a>
+        </div>
+    </div>
+
+
+
+    <div id="image_column"></div> <!-- slideshow container -->
+
+
+    <div style="position: relative; top: 630px; text-align: center;">
+        <h2 style="color: #235842; font-size: 38px;">OUR SERVICE</h2>
+        <hr style="background-color: #334e29; height: 5px ; width: 50%; bottom: 5px;">
+    </div>
+    
+        <table class="table_box">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>TITLE</th>
+                    <th>SUMMARY</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><b>Responsive Website designing & Development</b></td>
+                    <td>We develop all type of websites (Static, Dynamic, E-Ccommerce) using creative ideas, themes and latest technology.
+                         We hosting it on our high speed server for best-in-class experience.</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td><b>Software Development</b></td>
+                    <td>Software development is the process of conceiving requirement, programming, documenting & testing the solutions 
+                        before delivering and providing after sales support in developed applications, frameworks or software component.
+                        Our developer team is using latest technologies & we are capable of delivering required software at economical price.</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td><b>Mobile app development</b></td>
+                    <td>We as mobile application development company, are in the innovation centre of this immense shift in users’ behaviors 
+                    of accessing the internet. We understand mobile has become indispensable & your service need to be electric for that.
+                        We do Android as well as IOS App Development , Portal App Development , E-Commerce App Development.</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td><b>Bulk sms</b></td>
+                    <td>Try our API Gateway for SMS. It is with instant setup and we provide dedicated support with customized packages.
+                        We provide Promotional SMS, Transactional SMS, Voice SMS with accurate database.</td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td><b>Toll free Number</b></td>
+                    <td>Encourage more of your customers to connect you. Try our premium Toll Free Number with IVR Greeting message
+                        using state of the art functions.</td>
+                </tr>
+
+                <tr>
+                    <td>6</td>
+                    <td><b>Short Code service</b></td>
+                    <td>Short Codes / Short Digits / Short numbers are short digit sequences. These are significantly shorter
+                    than telephone numbers. These are used to address message in the Multi Media Messaging System. 
+                        We provide short message service and try our service demo to experience this powerful tool.</td>
+                </tr>
+
+                <tr>
+                    <td>7</td>
+                    <td><b>Miss call service</b></td>
+                    <td>We provide very reliable Missed Call alerts service at economic price without compromising data security. 
+                        Try our Online Panel for demo.</td>
+                </tr>
+
+                <tr>
+                    <td>8</td>
+                    <td><b>Whatsapp Promotion Panel</b></td>
+                    <td>We provide best in class whatsapp panel for business promotion and contacting to customers.
+                        Try our Whatsapp Panel for demo.</td>
+                </tr>
+
+                <tr>
+                    <td>9</td>
+                    <td><b>Animation Clips</b></td>
+                    <td>Our creative team makes 2D / 3D animations as per your subject needs in human as well as robotic voice.
+                        We deal in every type of animation clip for business promotion and contact us for more details.</td>
+                </tr>
+
+                <tr>
+                    <td>10</td>
+                    <td><b>Advanced Hosting</b></td>
+                    <td>We provide advanced high speed hosting from our fast servers to enable our customer best in class experience.</td>
+                </tr>
+
+            </tbody>
+        </table>
+       
+
+
+    <script>
+        // photo slide show 
+        function startSlideshow() {
+            var img = [
+                "photo/2.jpg",
+                "photo/3.png",  
+                "photo/4.jpg",  
+                "photo/5.jpg",  
+                "photo/digital-marketing.jpg"
+            ];
+    
+            var index = 0;
+            var box = document.getElementById("image_column"); // ✅ fixed id
+
+            function changeImage() {
+                box.style.backgroundImage = "url('" + img[index] + "')";
+                index = (index + 1) % img.length;
+            }
+
+            changeImage();
+            setInterval(changeImage, 1000); // change every 2s
+        }
+
+        window.onload = startSlideshow;
+    </script>
+</body>
+</html>

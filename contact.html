@@ -1,0 +1,219 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            margin: 0;
+            position: relative;
+            height: 220vh;
+            background-color: white;
+            font-family: 'Times New Roman';
+            gap: 20px;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background-color: #334e29;
+            height: 60px;
+            width: 100%;
+            margin: 0;
+            position: relative;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: #9fb98e;
+            font-size: 30px;
+            text-align: center;
+            text-decoration: none;
+            padding-right: 20px;
+            position: relative;
+            margin-left: 10px;
+        }
+
+        #image_column {
+            height: 40%;
+            width: 75%;
+            display: flex;
+            border: 5px solid #9fb98e;
+            position: absolute; 
+            top: 80px; 
+            left: 50%;
+            transform: translateX(-50%);
+            align-items: center;
+            justify-content: center;
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .text_box {
+            font-family: Georgia;
+            top: 660px;
+            position: relative;
+            margin-left: 150px;
+            display: flex;            /* side by side */
+            gap: 100px;                /* space between image and text */
+            align-items: flex-start;  /* align top of image & text */
+        }
+
+        .text_box .image_side {
+            width: 40%;               /* fixed width for image */
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .text_box-content {
+            flex: 1;                  /* take remaining space */
+        }
+
+        .text_box h1 {
+            font-size: 50px;
+            color: #23330e;
+            text-align: center;
+            position: relative;
+            bottom: 10px;
+        }
+
+        .text_box h3 {
+            font-size: 28px;
+            color: #235842;
+            text-align: left;
+            margin: 0 0 5px 0;
+        }
+
+        .text_box p {
+            font-size: 20px;
+            color: #678e34;
+            text-align: left;
+            margin: 0 0 15px 0;
+        }
+
+        /* 📱 Mobile Responsive */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+            }
+        
+            .navbar a {
+                display: block;
+                font-size: 20px;
+                margin: 8px 0;
+                padding: 8px 0;
+            }
+        
+            #image_column {
+                width: 95%;
+                height: 200px;
+                top: 70px;
+                position: relative;
+                transform: none;
+                left: 0;
+                margin: 0 auto;
+            }
+
+            .text_box {
+                flex-direction: column;  /* stack image above text */
+                top: 20px;
+                padding: 10px;
+            }
+
+            .text_box .image_side {
+                width: 100%;            /* full width on mobile */
+                margin-bottom: 20px;
+            }
+
+            .text_box h1 {
+                font-size: 30px;
+            }
+
+            .text_box h3 {
+                font-size: 20px;
+            }
+
+            .text_box p {
+                font-size: 16px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div>
+            <a href="index.html">Home</a>
+            <a href="P&S.html">Products & Services</a>
+            <a href="digital.html">Digital Marketing</a>
+            <a href="cloud.html">Cloud Service</a>
+            <a href="client.html">Our Clients</a>
+            <a href="partners.html">Our Partners</a>
+            <a href="contact.html">Contact us</a>
+        </div>
+    </div>
+
+    <div id="image_column"></div> <!-- slideshow container -->
+
+    <div style="position: relative; top: 630px; text-align: center;">
+        <h2 style="color: #235842; font-size: 38px;">CONTACT US</h2>
+        <hr style="background-color: #334e29; height: 5px ; width: 50%; bottom: 5px;">
+    </div>
+    
+    <div class="text_box">
+        <img class="image_side" src="map.jpg" alt="Map">
+        <div class="text_box-content">
+            <h3><b>CONTACT DETAILS</b></h3>
+            <p>info@andisoftwaresolutions.com <br> We reply within 24 hours</p>
+
+            <h3><i>Sales</i></h3>
+            <p>+91-7015574125 <br> ab@andisoftwaresolutions.com</p>
+
+            <h3><i>Support</i></h3>
+            <p>+91-7015574125 <br> support@andisoftwaresolutions.com</p>
+
+            <h3><i>Marketing</i></h3>
+            <p>+91-7015574125 <br> sales@andisoftwaresolutions.com</p>
+
+            <h3><i>Technical</i></h3>
+            <p>+91-7015574125 <br> dh@andisoftwaresolutions.com</p>
+
+            <h3><i>Website</i></h3>
+            <p>www.andisoftwaresolutions.com</p>
+        </div>
+    </div>
+
+    <script>
+        // photo slide show 
+        function startSlideshow() {
+            var img = [
+                "photo/2.jpg",
+                "photo/3.png",  
+                "photo/4.jpg",  
+                "photo/5.jpg",  
+                "photo/digital-marketing.jpg"
+            ];
+    
+            var index = 0;
+            var box = document.getElementById("image_column");
+
+            function changeImage() {
+                box.style.backgroundImage = "url('" + img[index] + "')";
+                index = (index + 1) % img.length;
+            }
+
+            changeImage();
+            setInterval(changeImage, 1000);
+        }
+
+        window.onload = startSlideshow;
+    </script>
+</body>
+</html>
