@@ -103,6 +103,24 @@
     margin-bottom: 8px;
     text-align: left;
 }
+           .service_heading {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .service_heading h2 {
+        color: #235842;
+        font-size: 38px;
+        margin-bottom: 10px;
+    }
+
+    .service_heading hr {
+        background-color: #334e29;
+        height: 5px;
+        width: 50%;
+        border: none;
+        margin: 0 auto;
+    }
 
 /* ✅ MOBILE FIX */
 @media (max-width: 768px) {
@@ -124,6 +142,10 @@
         height: 200px;
         margin: 20px auto;
     }
+
+    .service_heading h2 {
+            font-size: 26px;
+        }
 
     .carddd-container {
         flex-direction: column;  /* stack cards vertically */
@@ -173,10 +195,11 @@
     <div id="image_column"></div> <!-- slideshow container -->
 
 
-    <div style="position: relative; top: 630px; text-align: center;">
-        <h2 style="color: #235842; font-size: 38px;">OUR CLOUD SERVICES</h2>
-        <hr style="background-color: #334e29; height: 5px ; width: 50%; bottom: 5px;">
-    </div>
+    
+    <div class="service_heading">
+    <h2>OUR SERVICE</h2>
+    <hr>
+</div>
     
         <div class="carddd-container">
       <div class="carddd" style="background-color:#7ee6e2 ;">
@@ -445,4 +468,5 @@
     </script>
 </body>
 </html>
+
 
