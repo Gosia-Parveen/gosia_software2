@@ -89,6 +89,26 @@
     margin: 0 0 15px 0;
 }
 
+            .service_heading {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .service_heading h2 {
+        color: #235842;
+        font-size: 38px;
+        margin-bottom: 10px;
+    }
+
+    .service_heading hr {
+        background-color: #334e29;
+        height: 5px;
+        width: 50%;
+        border: none;
+        margin: 0 auto;
+    }
+        
+
 /* 📱 MOBILE */
 @media (max-width: 768px) {
     .navbar {
@@ -109,6 +129,10 @@
         height: 200px;
         margin: 20px auto;   /* ✅ no absolute top */
     }
+
+    .service_heading h2 {
+            font-size: 26px;
+        }
 
     .text_box {
         flex-direction: column;   /* stack image above text */
@@ -152,9 +176,10 @@
 
     <div id="image_column"></div> <!-- slideshow container -->
 
-    <div style="position: relative; top: 630px; text-align: center;">
-        <h2 style="color: #235842; font-size: 38px;">CONTACT US</h2>
-        <hr style="background-color: #334e29; height: 5px ; width: 50%; bottom: 5px;">
+    
+    <div class="service_heading">
+        <h2>CONTACT US</h2>
+        <hr>
     </div>
     
     <div class="text_box">
@@ -207,4 +232,5 @@
     </script>
 </body>
 </html>
+
 
