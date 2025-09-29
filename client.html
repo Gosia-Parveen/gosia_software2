@@ -6,136 +6,121 @@
     <title>Document</title>
     <style>
         body {
-            margin: 0;
-            position: relative;
-            height: 220vh;
-            background-color: white;
-            font-family: 'Times New Roman';
-            gap: 20px;
-             overflow-x: hidden;
-        }
+    margin: 0;
+    background-color: white;
+    font-family: 'Times New Roman';
+    gap: 20px;
+    overflow-x: hidden;
+}
 
-        .navbar {
-            background-color: #334e29;
-            height: 60px;
-            width: 100%;
-            margin: 0;
-            position: relative;
-            align-items: center;
-            display: flex;
-            justify-content: space-between;
-        }
+/* ✅ NAVBAR */
+.navbar {
+    background-color: #334e29;
+    height: 60px;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-        .navbar a {
-            color: #9fb98e;
-            font-size: 30px;
-            text-align: center;
-            text-decoration: none;
-            padding-right: 20px;
-            position: relative;
-            margin-left: 10px;
-        }
+.navbar a {
+    color: #9fb98e;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    padding-right: 20px;
+    margin-left: 10px;
+}
 
-        #image_column {
-            height: 40%;
-            width: 75%;
-            display: flex;
-            border: 5px solid #9fb98e;
-            position: absolute; 
-            top: 80px; 
-            left: 50%;
-            transform: translateX(-50%);
-            align-items: center;
-            justify-content: center;
+/* ✅ SLIDESHOW BOX */
+#image_column {
+    height: 40vh;              /* proportional to screen height */
+    width: 75%;
+    display: flex;
+    border: 5px solid #9fb98e;
+    margin: 80px auto 40px;    /* spacing from navbar */
+    align-items: center;
+    justify-content: center;
 
-            /* 👇 ensures all images fit box */
-            background-size: cover;  /* fill box proportionally */
-            background-position: center; /* center image */
-            background-repeat: no-repeat;
-        }
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
+/* ✅ TABLE */
+.table_box {
+    font-family: Georgia;
+    background-color: #dcf5c5;
+    width: 90%;
+    margin: 40px auto;          /* spacing below slideshow */
+    border-collapse: collapse;
+    text-align: center;
+}
 
-        .table_box {
-            font-family: Georgia;
-            top: 600px;
-            background-color:#dcf5c5;
-            position: relative;
-            width: 90%;              /* make table fit nicely */
-            margin: 0 auto;          /* center the table */
-            border-collapse: collapse;
-            text-align: center;      /* center text in cells */
-        }
+.table_box th, .table_box td {
+    border: 2px solid #334e29;
+    padding: 15px;
+    vertical-align: middle;
+}
 
-        .table_box th, .table_box td {
-            border: 2px solid #334e29;  /* table border */
-            padding: 15px;
-            vertical-align: middle;     /* center vertically */
-        }
+.table_box th {
+    font-size: 30px;
+    color: #23330e;
+}
 
-        .table_box th {
-            font-size: 30px;
-            color: #23330e;
-        }
-    
-        .table_box td {
-            font-size: 20px;
-            color: #235842;
-        }
-        
+.table_box td {
+    font-size: 20px;
+    color: #235842;
+}
 
-        /* 📱 Mobile Responsive */
-        @media (max-width: 768px) {
-            .navbar {
-            flex-direction: column;
-            height: auto;
-            padding: 10px;
-            }
-        
-            .navbar a {
-            display: block;
-            font-size: 20px;
-            margin: 8px 0;
-                padding: 8px 0;
-            }
-        
-            #image_column {
-                width: 95%;
-                height: 200px;
-                top: 70px;
-                position: relative;
-                transform: none;
-                left: 0;
-                margin: 0 auto;
-            }
+.table_box img {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
 
-            .table_box {
-                top: 20px;
-                width: 100%;
-                font-size: 16px;
-                overflow-x: auto;
-                display: block;
-            }
-        
-            .table_box th {
-                font-size: 20px;
-                padding: 8px;
-            }
+/* ✅ MOBILE FIX */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
 
-            .table_box td {
-                font-size: 14px;
-                padding: 6px;
-                text-align: left;   /* better readability on mobile */
-            }
-        }
+    .navbar a {
+        display: block;
+        font-size: 20px;
+        margin: 8px 0;
+        padding: 8px 0;
+    }
 
-            .table_box img {
-                width: 120px;   /* uniform image size */
-                height: auto;
-                display: block;
-                margin: 0 auto; /* center image in cell */
-            }
+    #image_column {
+        width: 95%;
+        height: 200px;
+        margin: 20px auto;
+    }
 
+    .table_box {
+        width: 100%;
+        margin: 20px auto;
+        font-size: 16px;
+        overflow-x: auto;   /* allows scroll if table too wide */
+        display: block;
+    }
 
+    .table_box th {
+        font-size: 20px;
+        padding: 8px;
+    }
+
+    .table_box td {
+        font-size: 14px;
+        padding: 6px;
+        text-align: left;   /* better readability */
+    }
+}
 
 
     </style>
@@ -262,3 +247,4 @@
     </script>
 </body>
 </html>
+
