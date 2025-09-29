@@ -96,48 +96,51 @@
 
 
 
+        
         /* 📱 Mobile Responsive */
-        @media (max-width: 768px) {
-        .navbar {
-            flex-direction: column;
-            height: auto;
-            padding: 10px;
-        }
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
 
-        .navbar a {
+    .navbar a {
         display: block;
         font-size: 20px;
         margin: 5px 0;
-            padding: 10px 0;
-        }
-
-        #image_column {
-            width: 95%;
-            height: 200px;
-            top: 70px;
-            position: relative;
-            transform: none;
-            left: 0;
-            margin: 0 auto;
-        }
-
-        .text_box {
-            top: 20px;
-            padding: 10px;
-        }
-
-        .text_box h1 {
-            font-size: 30px;
-        }
-
-        .text_box h3 {
-            font-size: 20px;
-        }
-
-        .text_box p {
-            font-size: 16px;
-        }
+        padding: 10px 0;
     }
+
+    #image_column {
+        width: 95%;
+        height: 200px;
+        top: 0;              /* reset */
+        position: relative;  /* stacked naturally */
+        transform: none;
+        left: 0;
+        margin: 0 auto;
+    }
+
+    .text_box {
+        top: 0;              /* reset desktop offset */
+        margin-top: 20px;    /* add space below image */
+        padding: 10px;
+        position: relative;
+    }
+
+    .text_box h1 {
+        font-size: 30px;
+    }
+
+    .text_box h3 {
+        font-size: 20px;
+    }
+
+    .text_box p {
+        font-size: 16px;
+    }
+}
 
     </style>
 </head>
@@ -240,3 +243,4 @@
     </script>
 </body>
 </html>
+
