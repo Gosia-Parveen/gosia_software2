@@ -81,6 +81,29 @@
     margin: 0 auto;
 }
 
+
+            .service_heading {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .service_heading h2 {
+        color: #235842;
+        font-size: 38px;
+        margin-bottom: 10px;
+    }
+
+    .service_heading hr {
+        background-color: #334e29;
+        height: 5px;
+        width: 50%;
+        border: none;
+        margin: 0 auto;
+    }
+
+
+
+
 /* ✅ MOBILE FIX */
 @media (max-width: 768px) {
     .navbar {
@@ -96,6 +119,12 @@
         padding: 8px 0;
     }
 
+    
+.service_heading h2 {
+            font-size: 26px;
+        }
+
+    
     #image_column {
         width: 95%;
         height: 200px;
@@ -144,10 +173,11 @@
     <div id="image_column"></div> <!-- slideshow container -->
 
 
-    <div style="position: relative; top: 630px; text-align: center;">
-        <h2 style="color: #235842; font-size: 38px;">OUR CLIENTS</h2>
-        <hr style="background-color: #334e29; height: 5px ; width: 50%; bottom: 5px;">
-    </div>
+    
+    <div class="service_heading">
+    <h2>OUR CLIENTS</h2>
+    <hr>
+</div>
     
         <table class="table_box">
             <thead>
@@ -247,4 +277,5 @@
     </script>
 </body>
 </html>
+
 
